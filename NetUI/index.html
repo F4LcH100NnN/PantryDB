@@ -39,10 +39,20 @@
     let allItems = [];
 
     async function loadItems() {
-      const res = await fetch(API_BASE);
-      allItems = await res.json();
-      displayItems(allItems);
-    }
+        const res = await fetch(API_BASE);
+        allItems = await res.json();
+
+        // Normalize casing from API
+        allItems = allItems.map(item => ({
+            ...item,
+            itemName: item.itemName || item.ItemName,
+            itemQTY: item.itemQTY || item.ItemQTY,
+            itemBBDate: item.itemBBDate || item.ItemBBDate
+        }));
+
+        displayItems(allItems);
+        }
+
 
     function displayItems(items) {
       const tbody = document.querySelector('#itemsTable tbody');
