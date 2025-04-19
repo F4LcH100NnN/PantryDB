@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PantryApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+760e8bec6fc7ecde410792c9902fe409f7dd44bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b2cd6114126c5c3cb9c5c32a8daf7bcc92bf5b5")]
 [assembly: System.Reflection.AssemblyProductAttribute("PantryApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PantryApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
