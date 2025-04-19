@@ -1,6 +1,12 @@
+using PantryApi.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
 
+builder.Services.AddDbContext<PantryContext>(options =>
+    options.UseSqlite("Data Source=pantry.db"));
 
 var app = builder.Build();
 
@@ -11,6 +17,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapControllers();
 
 var summaries = new[]
 {
