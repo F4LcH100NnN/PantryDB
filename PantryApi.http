@@ -1,0 +1,6 @@
+@PantryApi_HostAddress = http://localhost:5137
+
+GET {{PantryApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
