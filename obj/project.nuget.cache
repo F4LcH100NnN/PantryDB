@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mLP8m+PJAqw=",
+  "dgSpecHash": "nZQnVsR6JJs=",
   "success": true,
   "projectFilePath": "C:\\Users\\andre\\source\\repos\\PantryApi\\PantryApi\\PantryApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\fuzzysharp\\2.0.2\\fuzzysharp.2.0.2.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.4\\microsoft.aspnetcore.openapi.8.0.4.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

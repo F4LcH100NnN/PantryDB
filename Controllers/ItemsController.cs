@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PantryApi.Data;
 using PantryApi.Models;
+using FuzzySharp;
 
 namespace PantryApi.Controllers
 {
@@ -15,6 +16,29 @@ namespace PantryApi.Controllers
         {
             _context = context;
         }
+
+        [HttpGet("search")]
+    public async Task<ActionResult<IEnumerable<Item>>> SearchItems([FromQuery] string query)
+    {
+        if (string.IsNullOrWhiteSpace(query))
+            return BadRequest("Search query is required.");
+
+        var items = await _context.Items.ToListAsync();
+
+        var results = items
+            .Select(item => new
+            {
+                Item = item,
+                Score = Fuzz.PartialRatio(query.ToLower(), item.ItemName.ToLower())
+            })
+            .Where(x => x.Score >= 80)
+            .OrderByDescending(x => x.Score)
+            .Select(x => x.Item)
+            .ToList();
+
+        return results;
+    }
+
 
         // GET: api/items
         [HttpGet]
